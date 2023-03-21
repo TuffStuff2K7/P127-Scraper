@@ -24,7 +24,7 @@ def scrape():
                         temp_list.append("")
             planet_data.append(temp_list)
         browser.find_element_by_xpath('//*[@id="primary_column"]/footer/div/div/div/nav/span[2]/a').click()
-    with open("scrapper_2.csv", "w") as f:
+    with open("scrapedData.csv", "w") as f:
         csvwriter = csv.writer(f)
         csvwriter.writerow(headers)
         csvwriter.writerows(planet_data)
